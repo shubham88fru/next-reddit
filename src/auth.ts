@@ -16,6 +16,7 @@ export const {
   signOut,
   signIn,
 } = NextAuth({
+  secret: process.env.NEXT_PUBLIC_SECRET,
   adapter: PrismaAdapter(db),
   providers: [
     GitHub({
